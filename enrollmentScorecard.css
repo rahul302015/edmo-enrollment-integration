@@ -1,0 +1,35 @@
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.badge-hot {
+    background: #ba0517;
+}
+
+.badge-warm {
+    background: #ff9f00;
+}
+
+.badge-cold {
+    background: #0176d3;
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0.5rem 0.75rem;
+}
+
+.label {
+    color: #6b6d70;
+    font-weight: 600;
+}
+
+.value {
+    color: #1f1f1f;
+}

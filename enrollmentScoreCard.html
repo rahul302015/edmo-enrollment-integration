@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Enrollment Score">
+        <div class="slds-p-around_medium">
+            <template if:true={errorMessage}>
+                <div class="slds-text-color_error slds-m-bottom_small">
+                    {errorMessage}
+                </div>
+            </template>
+
+            <template if:true={hasScore}>
+                <div class="slds-m-bottom_small">
+                    <span class={badgeClass}>{priority}</span>
+                </div>
+
+                <div class="meta-grid">
+                    <div class="label">Score</div>
+                    <div class="value">{score}</div>
+
+                    <div class="label">Recommended Action</div>
+                    <div class="value">{recommendedAction}</div>
+
+                    <div class="label">Source System</div>
+                    <div class="value">{sourceSystem}</div>
+
+                    <div class="label">Scored At</div>
+                    <div class="value">
+                        <lightning-formatted-date-time
+                            value={scoredAt}
+                            year="numeric"
+                            month="short"
+                            day="2-digit"
+                            hour="2-digit"
+                            minute="2-digit"
+                        ></lightning-formatted-date-time>
+                    </div>
+                </div>
+            </template>
+
+            <template if:true={showNoScore}>
+                <div class="slds-text-color_weak">
+                    No enrollment score available yet
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
